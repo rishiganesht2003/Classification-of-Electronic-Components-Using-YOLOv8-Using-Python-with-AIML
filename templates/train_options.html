@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="train-page">
+    <div class="container">
+        <h1 style="color: #ff5722;">Train the Model</h1>
+        <form action="{{ url_for('train') }}" method="post" style="text-align: center;">
+            <label for="epochs" style="font-size: 18px; color: #444;">Number of Epochs:</label>
+            <input type="number" id="epochs" name="epochs" min="1" max="100" required>
+            <input type="submit" value="Start Training" style="margin-top: 20px;">
+        </form>
+        <a href="{{ url_for('index') }}" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>

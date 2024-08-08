@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Plots</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+<body>
+    <h1>Training Plots</h1>
+    <div>
+        <img src="{{ url_for('plot', filename='loss_vs_epochs.png') }}" alt="Loss vs Epochs">
+        <img src="{{ url_for('plot', filename='accuracy_vs_epochs.png') }}" alt="Accuracy vs Epochs">
+        <a href="{{ url_for('index') }}" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>

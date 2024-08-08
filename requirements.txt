@@ -1,0 +1,5 @@
+Flask==2.3.2
+ultralytics==8.0.15
+numpy==1.25.0
+pandas==2.1.1
+matplotlib==3.8.0

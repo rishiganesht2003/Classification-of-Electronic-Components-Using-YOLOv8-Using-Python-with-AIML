@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="train-page">
+    <div class="container">
+        <h1>Training Status</h1>
+        {% if message %}
+            <p class="status-message">{{ message }}</p>
+            <pre class="log-output">{{ log }}</pre>
+            <a href="{{ url_for('training_plots') }}" class="container-link">View Training Plots</a>
+            <a href="{{ url_for('index') }}" class="container-link">Go to Prediction</a>
+        {% endif %}
+        <a href="{{ url_for('index') }}" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>
